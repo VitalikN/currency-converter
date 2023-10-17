@@ -1,0 +1,47 @@
+<section class="currency__overview">
+  <h1 class="title">Курси валют</h1>
+  <p class="text">УВАГА: курси можуть змінюватись на протязі дня</p>
+  <div class="exchange__rates" *ngIf="usdToUah && eurToUah">
+    <p class="text">Курс USD/UAH = {{ usdToUah }} UAH</p>
+    <p class="text">Курс EUR/UAH = {{ eurToUah }} UAH</p>
+  </div>
+</section>
+
+<section class="converter__section">
+  <div class="converter__wrapper">
+    <h2 class="subject">РОЗРАХУНОК ОБМІНУ</h2>
+    <div class="currency__block">
+      <label class="label">Віддаєте</label>
+      <div class="box">
+        <input
+          type="number"
+          class="input"
+          [(ngModel)]="amount1"
+          (input)="convert()"
+        />
+        <select class="select" [(ngModel)]="currency1" (change)="convert()">
+          <option value="UAH">UAH</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="currency__block">
+      <label>Отримуєте</label>
+      <div class="box">
+        <input
+          class="input"
+          type="number"
+          [(ngModel)]="amount2"
+          (input)="convert()"
+        />
+        <select class="select" [(ngModel)]="currency2" (change)="convert()">
+          <option value="UAH">UAH</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>

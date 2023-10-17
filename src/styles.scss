@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  width: 100vw;
+  line-height: 1;
+  font-family: "Playfair Display", Sans-serif;
+
+  color: #fbf69d;
+  font-size: 16px;
+  background-color: #47a357;
+
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
